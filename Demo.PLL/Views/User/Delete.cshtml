@@ -1,0 +1,13 @@
+﻿@model UserViewModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Delete User</h1>
+
+<form asp-action="Delete">
+
+    <partial name="PartialViewUser/ReadonlyInpuntuser"></partial>
+    <button type="submit" class="btn btn-danger">Delete</button>|
+    <a asp-action="Index" class="btn btn-light">Go Back</a>
+</form>

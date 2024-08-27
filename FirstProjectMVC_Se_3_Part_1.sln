@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.PL", "Demo.PLL\Demo.PL.csproj", "{7350F2FE-7332-4828-9EBB-E020F1CC3E58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.DAL", "Demo.DAL\Demo.DAL.csproj", "{F9CF88F3-02D9-4EDB-B895-CD1CBA500C57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.BLL", "Demo.BLL\Demo.BLL.csproj", "{090AF21D-5414-4BAC-A56C-BA323AD27D01}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7350F2FE-7332-4828-9EBB-E020F1CC3E58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7350F2FE-7332-4828-9EBB-E020F1CC3E58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7350F2FE-7332-4828-9EBB-E020F1CC3E58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7350F2FE-7332-4828-9EBB-E020F1CC3E58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9CF88F3-02D9-4EDB-B895-CD1CBA500C57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9CF88F3-02D9-4EDB-B895-CD1CBA500C57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9CF88F3-02D9-4EDB-B895-CD1CBA500C57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9CF88F3-02D9-4EDB-B895-CD1CBA500C57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{090AF21D-5414-4BAC-A56C-BA323AD27D01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{090AF21D-5414-4BAC-A56C-BA323AD27D01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{090AF21D-5414-4BAC-A56C-BA323AD27D01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{090AF21D-5414-4BAC-A56C-BA323AD27D01}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E6E2A49-0A5B-4D05-B79F-BFB326DC4799}
+	EndGlobalSection
+EndGlobal

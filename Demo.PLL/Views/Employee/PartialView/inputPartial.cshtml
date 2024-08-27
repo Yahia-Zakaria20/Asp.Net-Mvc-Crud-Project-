@@ -1,0 +1,58 @@
+﻿
+@model EmployeeViewModel
+
+@inject IUnitOfWork _unitofwork
+@{
+    
+    var Depts = new SelectList(await _unitofwork.DepartmentRepositry.GetAllAsync(), nameof(Department.Id), nameof(Department.Name));
+}
+
+
+<div class="form-group">
+    <label asp-for="Name"></label>
+    <input asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Age"></label>
+    <input asp-for="Age" class="form-control" />
+    <span asp-validation-for="Age"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Address"></label>
+    <input asp-for="Address" class="form-control" />
+    <span asp-validation-for="Address"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Salary"></label>
+    <input asp-for="Salary" class="form-control" />
+</div>
+<div class="form-group">
+    <label asp-for="Email"></label>
+    <input asp-for="Email" class="form-control" />
+</div>
+<div class="form-check">
+    <input asp-for="IsActive" class="form-check-input" />
+    <label asp-for="IsActive"></label>
+</div>
+<div class="form-group">
+    <label asp-for="PhoneNumber"></label>
+    <input asp-for="PhoneNumber" class="form-control" />
+</div>
+<div class="form-group">
+    <label asp-for="HiringDate"></label>
+    <input asp-for="HiringDate" class="form-control" />
+</div>
+<div class="form-group">
+    <label asp-for="Image"></label>
+    <input asp-for="Image" class="form-control-file" />
+</div>
+<div class="form-group">
+    <input asp-for="ImageName" class="form-control-file" hidden />
+</div>
+<div class="form-group">
+    <label class="col-form-label" asp-for="Department"></label>
+    <select class="form-control" asp-for="Dept_Id" asp-items="@Depts">
+        <option value="@null">-- Select Options --</option>
+</select>
+</div>

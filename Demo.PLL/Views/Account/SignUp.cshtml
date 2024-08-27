@@ -1,0 +1,55 @@
+﻿@model SignUpViewModel
+@{
+    ViewData["Title"] = "SignUp";
+    Layout = "~/Views/Shared/_AuthLayout.cshtml";
+}
+
+<h1>SignUp</h1>
+
+<form asp-action="SignUp">
+	<div asp-validation-summary="All"></div>
+	<div class="form-group">
+		<input class="text" asp-for="Fname" placeholder="Firest Name" required="">
+		<span asp-validation-for="Fname"></span>
+	</div>
+	<div class="form-group">
+		<input class="text" asp-for="Lname" placeholder="Last Name" required="">
+		<span asp-validation-for="Lname"></span>
+	</div>
+	<div class="form-group">
+		<input class="text" asp-for="Username" placeholder="Username" required="">
+		<span asp-validation-for="Username"></span>
+	</div>
+	<div class="form-group">
+		<input class="text email" asp-for="Email" placeholder="Email" required="">
+		<span asp-validation-for="Email"></span>
+	</div class="form-group">
+	<div class="form-group">
+		<input  asp-for="PhoneNumber" placeholder="Phone Number" required="">
+		<span asp-validation-for="PhoneNumber"></span>
+	</div class="form-group">
+	<div>
+		<input class="text" asp-for="Password" placeholder="Password" required="">
+		<span asp-validation-for="Password"></span>
+	</div>
+	<div class="form-group">
+		<input class="text w3lpass" asp-for="ConfirmPassword" placeholder="Confirm Password" required="">
+		<span asp-validation-for="ConfirmPassword"></span>
+	</div>
+	
+	<div class="wthree-text">
+		<label class="anim">
+			<input asp-for="IsAgree" class="checkbox" required="">
+			<span>I Agree To The Terms & Conditions</span>
+		</label>
+		<div class="clear"> </div>
+	</div>
+	
+	<input type="submit" value="SIGNUP">
+</form>
+<p>Do you have an Account? <a asp-action="SignIn"> Login Now!</a></p>
+
+
+@section ValidationSection {
+	<partial name="_ValidationScriptsPartial" /></partial>
+}

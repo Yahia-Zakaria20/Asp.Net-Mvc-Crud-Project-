@@ -1,0 +1,63 @@
+﻿@model EmployeeViewModel
+
+    <div>
+        <img src="~/Files/Images/@Model.ImageName" width="75" class="img-fluid rounded-circle" />
+    </div>
+<br />
+<div class="form-group">
+    <label asp-for="Name"></label>
+    <input asp-for="Name" class="form-control" readonly />
+</div>
+<div class="form-group">
+    <label asp-for="Age"></label>
+    <input asp-for="Age" class="form-control" readonly />
+</div>
+<div class="form-group">
+    <label asp-for="Address"></label>
+    <input asp-for="Address" class="form-control" readonly />
+</div>
+<div class="form-group">
+    <label asp-for="Salary"></label>
+    <input asp-for="Salary" class="form-control" readonly />
+</div>
+<div class="form-group">
+    <label asp-for="Email"></label>
+    <input asp-for="Email" class="form-control" readonly />
+</div>
+<div class="form-check">
+    <input asp-for="IsActive" class="form-check-input" readonly />
+    <label asp-for="IsActive"></label>
+</div>
+<div class="form-group">
+    <label asp-for="PhoneNumber"></label>
+    <input asp-for="PhoneNumber" class="form-control" readonly />
+</div>
+<div class="form-group">
+    <label asp-for="HiringDate"></label>
+    <input asp-for="HiringDate" class="form-control" readonly />
+</div>
+
+<div class="form-group">
+    <input asp-for="ImageName" hidden />
+</div>
+
+<div class="form-group">
+    <input hidden asp-for="Dept_Id" readonly />
+</div>
+@{
+    if (Model.Dept_Id is not null)
+    {
+        <div class="form-group">
+            <label asp-for="Department"></label>
+            <input asp-for="Department.Name" class="form-control" readonly />
+        </div>
+    }
+    else
+    {
+        <div class="form-group">
+            <label asp-for="Department"></label>
+            <input  class="form-control" readonly  placeholder="Has No Department"/>
+        </div>
+    }
+}
+

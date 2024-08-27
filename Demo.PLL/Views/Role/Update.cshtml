@@ -1,0 +1,19 @@
+﻿@model RoleViewModel
+
+<h1>Edit Role </h1>
+
+<form asp-action="Update">
+    <div asp-validation-summary="All"></div>
+    <div class="form-group">
+        <label asp-for="RoleName"></label>
+        <input asp-for="RoleName" class="form-control" />
+        <span asp-validation-for="RoleName"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Update</button> |
+    <a asp-action="Index" class="btn btn-light">Go Back</a>
+</form>
+
+@section ValidationSection {
+    <partial name="_ValidationScriptsPartial" /></partial>
+}

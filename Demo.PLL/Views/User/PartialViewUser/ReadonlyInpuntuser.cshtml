@@ -1,0 +1,41 @@
+﻿@model UserViewModel
+
+
+<div class="form-group">
+    <label asp-for="UserName"></label>
+    <input asp-for="UserName" class="form-control" readonly />
+</div>
+<div class="form-group">
+    <label asp-for="FName"></label>
+    <input asp-for="FName" class="form-control" readonly />
+</div>
+<div class="form-group">
+    <label asp-for="LName"></label>
+    <input asp-for="LName" class="form-control" readonly />
+</div>
+<div class="form-group">
+    <label asp-for="PhoneNumber"></label>
+    <input asp-for="PhoneNumber" class="form-control" readonly />
+</div>
+<div class="form-group">
+    <label asp-for="Email"></label>
+    <input asp-for="Email" class="form-control" readonly />
+</div>
+@if (Model.Roles.Count() >0)
+{
+    <div class="form-group">
+        <label asp-for="Roles"></label>
+        <input asp-for="Roles" class="form-control" value="@string.Join(",",Model.Roles).ToList()" readonly />
+    </div>
+
+  
+}
+else
+{
+
+    <div class="form-group">
+        <label asp-for="Roles"></label>
+        <input asp-for="Roles" class="form-control" value="There Is No Roles" readonly />
+    </div>
+}
+
